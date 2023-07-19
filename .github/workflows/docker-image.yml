@@ -31,4 +31,4 @@ jobs:
         docker build -t shainttw/docker-graphql:0.0.2 .
     - name: Push Docker Image
       run: |
-        docker push shainttw/docker-graphql:0.0.2 .
+        docker push shainttw/docker-graphql:0.0.2 
