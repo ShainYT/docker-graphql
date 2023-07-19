@@ -45,6 +45,8 @@ jobs:
         docker build -t shainttw/docker-graphql:$NEW_VERSION .
         docker build -t shainttw/docker-graphql:latest .
     - name: Push Docker Image
+      env:
+        NEW_VERSION: ${{steps.version.outputs.version}}
       run: |
         docker push shainttw/docker-graphql:$NEW_VERSION
         docker push shainttw/docker-graphql:latest
